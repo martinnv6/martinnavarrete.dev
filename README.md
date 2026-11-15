@@ -6,7 +6,8 @@ Personal site for **Martín Navarrete**: Technical Lead and Senior Software Engi
 - Production (canonical): [https://martinnavarrete.dev](https://martinnavarrete.dev)
 - `www.martinnavarrete.dev` must redirect (301) to the canonical host; see [Fixing `www`](#fixing-www) below
 - Registrar: Cloudflare Registrar
-- Hosting: Cloudflare Pages (confirmed: the live site answers with `server: cloudflare`; the `CNAME` file is a GitHub Pages leftover and has no effect)
+- Hosting: Cloudflare Workers static assets, deployed by **Workers Builds** (`martinnavarrete-dev`) on every push. Pushes to `main` go to production; other branches get a preview build.
+- GitHub Pages is also enabled on this repo (it still records `github-pages` deployments from `main`). Cloudflare serves the domain, so GitHub Pages is unused: turn it off in the repo's Settings → Pages to avoid confusion. The `CNAME` file only matters to GitHub Pages.
 - SSL: Automated via Cloudflare Edge (HSTS Preloaded)
 
 ## 📁 Repository Structure
@@ -24,7 +25,7 @@ martinnavarrete.dev/
 ├── index.html              # Overview (/)
 ├── leadership/index.html   # /leadership/
 ├── engineering/index.html  # /engineering/
-├── 404.html                # Served by Cloudflare Pages for unknown routes
+├── 404.html                # Custom not-found page (served when the Worker's assets use not_found_handling = "404-page")
 ├── sitemap.xml
 ├── style.css               # Shared design tokens, dark/light themes, responsive layout
 ├── app.js                  # Theme toggle, experience filters, resume dialog, mobile nav
@@ -44,6 +45,8 @@ Every page is plain HTML with the same header, contact section, footer and resum
 Content rule: only confirmed facts and metrics. The leadership CV source of truth is `Job-Seeking-2026/Resumes/2026-11_Ternium_MichaelPage/` (`CV_Martin_Navarrete_EN.md` / `_ES.md`).
 
 ## 🛠️ Step-by-Step: 2-Minute Deployment to Cloudflare Pages ($0/mo Forever)
+
+> The live site ended up on Cloudflare Workers (Workers Builds, see Live Domain above). These original Pages steps are kept for reference.
 
 Since your domain **`martinnavarrete.dev`** is already registered directly with Cloudflare, deploying is seamless with zero DNS configuration headaches:
 
@@ -84,7 +87,7 @@ Since your domain **`martinnavarrete.dev`** is already registered directly with 
 
 **Symptom:** `https://martinnavarrete.dev` loads, `https://www.martinnavarrete.dev` fails to connect (a network-level failure, not an HTTP error page).
 
-**Cause:** the `www` hostname was never set up. The original deployment steps only attached the bare domain to the Pages project, and `www` was left as an optional step, so there is no `www` DNS record. A `CNAME` file in the repo cannot create one: Cloudflare Pages ignores it.
+**Cause:** the `www` hostname was never set up. The original deployment steps only attached the bare domain to the Cloudflare project, and `www` was left as an optional step, so there is no `www` DNS record. A `CNAME` file in the repo cannot create one: Cloudflare ignores it.
 
 **Fix (Cloudflare dashboard, about 5 minutes; nothing in this repo can do it):**
 1. **DNS** &rarr; **Records** &rarr; add a record: type `A`, name `www`, IPv4 `192.0.2.1`, **Proxied** (orange cloud). The address is a placeholder; the proxy answers the request, so the redirect below can fire.
@@ -93,7 +96,7 @@ Since your domain **`martinnavarrete.dev`** is already registered directly with 
    - Then: Dynamic redirect, expression `concat("https://martinnavarrete.dev", http.request.uri.path)`, status **301**, preserve query string
 3. Check: `curl -I https://www.martinnavarrete.dev/` should return `301` with `location: https://martinnavarrete.dev/`.
 
-Alternative: attach `www.martinnavarrete.dev` as a second custom domain on the Pages project (it then serves the same site with no redirect). The redirect is preferred so there is a single canonical URL; the page already declares `<link rel="canonical" href="https://martinnavarrete.dev/">`.
+Alternative: attach `www.martinnavarrete.dev` as a second custom domain on the Worker (Settings → Domains & Routes) (it then serves the same site with no redirect). The redirect is preferred so there is a single canonical URL; the page already declares `<link rel="canonical" href="https://martinnavarrete.dev/">`.
 
 ---
 
