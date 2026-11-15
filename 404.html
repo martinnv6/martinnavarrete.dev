@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found | Martín Navarrete</title>
+  <meta name="description" content="This page does not exist.">
+  <meta name="author" content="Martín Navarrete Villegas">
+  <meta name="robots" content="noindex">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="martinnavarrete.dev">
+  <meta property="og:url" content="https://martinnavarrete.dev/404">
+  <meta property="og:title" content="Page not found">
+  <meta property="og:description" content="This page does not exist.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Page not found">
+  <meta name="twitter:description" content="This page does not exist.">
+
+  <!-- Apply the saved theme before first paint -->
+  <script>try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body data-page="404">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="ambient-layer" aria-hidden="true">
+    <div class="ambient-glow glow-top"></div>
+    <div class="ambient-glow glow-middle"></div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="site-header" id="header">
+    <div class="nav-container">
+      <a href="/" class="brand-logo" aria-label="martinnavarrete.dev home">
+        <span class="logo-badge">MN</span>
+        <span class="logo-text">martinnavarrete<span class="tld">.dev</span></span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <a href="/" class="nav-link">Overview</a>
+        <a href="/leadership/" class="nav-link">Leadership</a>
+        <a href="/engineering/" class="nav-link">Engineering</a>
+        <a href="/engineering/#projects" class="nav-link">Projects</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-secondary btn-sm" id="resume-modal-btn" data-open-resumes aria-haspopup="dialog" aria-expanded="false">
+          <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Resumes</span>
+        </button>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light and dark theme" title="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="/#contact" class="btn btn-primary btn-sm contact-cta">Contact</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open navigation menu" aria-controls="nav-menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero-section">
+      <div class="container hero-container">
+        <div class="section-tag">404</div>
+        <h1 class="hero-title">This page doesn't exist</h1>
+        <p class="hero-subtitle">The link may be old. Pick where you want to go:</p>
+        <div class="hero-cta-group">
+          <a href="/" class="btn btn-primary btn-lg"><span>Overview</span><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <a href="/leadership/" class="btn btn-outline btn-lg"><span>Leadership</span></a>
+          <a href="/engineering/" class="btn btn-outline btn-lg"><span>Engineering</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <span class="footer-brand">Martín Navarrete</span>
+        <span class="footer-copyright">&copy; 2026</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/">Overview</a>
+        <a href="/leadership/">Leadership</a>
+        <a href="/engineering/">Engineering</a>
+      </nav>
+      <a href="#header" class="back-to-top" aria-label="Back to top"><span>Back to top</span> <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg></a>
+    </div>
+  </footer>
+
+  <!-- Resume Download Dialog -->
+  <dialog class="modal-dialog" id="resume-dialog" aria-labelledby="dialog-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="dialog-icon"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <div>
+          <h3 class="modal-title" id="dialog-title">Choose a resume</h3>
+          <p class="modal-subtitle">PDF versions tailored to each kind of role</p>
+        </div>
+        <button class="modal-close" id="modal-close-btn" aria-label="Close dialog"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      </div>
+        <h4 class="resume-group-title">Software engineering &amp; architecture</h4>
+        <div class="resume-list">
+          <a href="/assets/resumes/Martin_Navarrete_Senior_Software_Engineer.pdf" download="Martin_Navarrete_Senior_Software_Engineer.pdf" class="resume-option-card">
+            <div class="option-icon" aria-hidden="true">💻</div>
+            <div class="option-text">
+              <span class="option-title">Senior Software Engineer</span>
+              <span class="option-desc">C#, .NET Core, Angular, distributed microservices and caching</span>
+            </div>
+            <span class="btn btn-outline btn-sm">PDF</span>
+          </a>
+          <a href="/assets/resumes/Martin_Navarrete_Principal_Software_Architect.pdf" download="Martin_Navarrete_Principal_Software_Architect.pdf" class="resume-option-card">
+            <div class="option-icon" aria-hidden="true">🏛️</div>
+            <div class="option-text">
+              <span class="option-title">Principal Software Architect</span>
+              <span class="option-desc">System architecture, Cloud Foundry, Azure, Kafka event-driven design, DDD</span>
+            </div>
+            <span class="btn btn-outline btn-sm">PDF</span>
+          </a>
+          <a href="/assets/resumes/Martin_Navarrete_Senior_AI_Engineer.pdf" download="Martin_Navarrete_Senior_AI_Engineer.pdf" class="resume-option-card">
+            <div class="option-icon" aria-hidden="true">🤖</div>
+            <div class="option-text">
+              <span class="option-title">Senior AI Engineer &amp; MCP</span>
+              <span class="option-desc">Model Context Protocol, agentic workflows and human-in-the-loop guardrails</span>
+            </div>
+            <span class="btn btn-outline btn-sm">PDF</span>
+          </a>
+          <a href="/assets/resumes/Martin_Navarrete_ML_Engineer.pdf" download="Martin_Navarrete_ML_Engineer.pdf" class="resume-option-card">
+            <div class="option-icon" aria-hidden="true">📊</div>
+            <div class="option-text">
+              <span class="option-title">Senior Software &amp; Machine Learning Engineer</span>
+              <span class="option-desc">Data science, telemetry, observability and anomaly detection</span>
+            </div>
+            <span class="btn btn-outline btn-sm">PDF</span>
+          </a>
+        </div>
+        <h4 class="resume-group-title">Engineering leadership</h4>
+        <div class="resume-list">
+          <a href="/assets/resumes/Martin_Navarrete_AI_Engineering_Leadership.pdf" download="Martin_Navarrete_AI_Engineering_Leadership.pdf" class="resume-option-card">
+            <div class="option-icon" aria-hidden="true">🧭</div>
+            <div class="option-text">
+              <span class="option-title">AI Engineering Leadership &amp; Developer Platform</span>
+              <span class="option-desc">Technical leadership of 6&ndash;9 engineers, CI/CD and release gating, AI agents in the SDLC (MCP)</span>
+            </div>
+            <span class="btn btn-outline btn-sm">PDF</span>
+          </a>
+          <a href="/assets/resumes/Martin_Navarrete_AI_Engineering_Leadership_ES.pdf" download="Martin_Navarrete_AI_Engineering_Leadership_ES.pdf" class="resume-option-card" hreflang="es">
+            <div class="option-icon" aria-hidden="true">🇲🇽</div>
+            <div class="option-text">
+              <span class="option-title">Liderazgo de Ingeniería e IA (Español)</span>
+              <span class="option-desc">La misma versión de liderazgo, en español</span>
+            </div>
+            <span class="btn btn-outline btn-sm">PDF</span>
+          </a>
+        </div>
+
+      <div class="modal-footer">
+        <span>Need Word or plain text? Write to <a href="mailto:martin.nv6@gmail.com">martin.nv6@gmail.com</a>.</span>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="/app.js"></script>
+</body>
+</html>

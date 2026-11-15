@@ -19,7 +19,8 @@ function initThemeToggle() {
   const htmlRoot = document.documentElement;
 
   // Retrieve stored theme or fallback to system preference
-  const savedTheme = localStorage.getItem('theme');
+  let savedTheme = null;
+  try { savedTheme = localStorage.getItem('theme'); } catch (e) { /* storage unavailable */ }
   const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const currentTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
 
@@ -29,13 +30,15 @@ function initThemeToggle() {
     themeToggleBtn.addEventListener('click', () => {
       const newTheme = htmlRoot.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       applyTheme(newTheme);
-      localStorage.setItem('theme', newTheme);
+      try { localStorage.setItem('theme', newTheme); } catch (e) { /* storage unavailable */ }
     });
   }
 
   // React to OS-level theme changes if user hasn't explicitly set a preference
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-    if (!localStorage.getItem('theme')) {
+    let stored = null;
+    try { stored = localStorage.getItem('theme'); } catch (err) { /* storage unavailable */ }
+    if (!stored) {
       applyTheme(e.matches ? 'dark' : 'light');
     }
   });
@@ -84,10 +87,8 @@ function initExperienceFilters() {
  */
 function initResumeModal() {
   const dialog = document.getElementById('resume-dialog');
-  const openButtons = [
-    document.getElementById('resume-modal-btn'),
-    document.getElementById('hero-resume-btn')
-  ].filter(Boolean);
+  const openButtons = Array.from(document.querySelectorAll('#resume-modal-btn, [data-open-resumes]'))
+    .filter((btn, i, all) => all.indexOf(btn) === i);
   const closeBtn = document.getElementById('modal-close-btn');
 
   if (!dialog) return;
