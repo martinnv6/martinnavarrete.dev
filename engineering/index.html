@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Engineering | Martín Navarrete</title>
+  <meta name="description" content="Engineering profile of Martín Navarrete: Senior Software Engineer with 12+ years in C#, .NET Core, Angular, SQL Server, Redis and Kafka, dell.com cart and checkout for 100+ countries, and AI-augmented workflows.">
+  <meta name="author" content="Martín Navarrete Villegas">
+  <link rel="canonical" href="https://martinnavarrete.dev/engineering/">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="martinnavarrete.dev">
+  <meta property="og:url" content="https://martinnavarrete.dev/engineering/">
+  <meta property="og:title" content="Software Engineering | Martín Navarrete">
+  <meta property="og:description" content="Senior Software Engineer and architect: .NET Core microservices for dell.com cart and checkout (100+ countries), CEMEX GO middleware (21 countries), projects and skills.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Software Engineering | Martín Navarrete">
+  <meta name="twitter:description" content="Senior Software Engineer and architect: .NET Core microservices for dell.com cart and checkout (100+ countries), CEMEX GO middleware (21 countries), projects and skills.">
+
+  <!-- Apply the saved theme before first paint -->
+  <script>try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body data-page="engineering">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="ambient-layer" aria-hidden="true">
+    <div class="ambient-glow glow-top"></div>
+    <div class="ambient-glow glow-middle"></div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="site-header" id="header">
+    <div class="nav-container">
+      <a href="/" class="brand-logo" aria-label="martinnavarrete.dev home">
+        <span class="logo-badge">MN</span>
+        <span class="logo-text">martinnavarrete<span class="tld">.dev</span></span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <a href="/" class="nav-link">Overview</a>
+        <a href="/leadership/" class="nav-link">Leadership</a>
+        <a href="/engineering/" class="nav-link active" aria-current="page">Engineering</a>
+        <a href="/engineering/#projects" class="nav-link">Projects</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-secondary btn-sm" id="resume-modal-btn" data-open-resumes aria-haspopup="dialog" aria-expanded="false">
+          <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Resumes</span>
+        </button>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light and dark theme" title="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm contact-cta">Contact</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open navigation menu" aria-controls="nav-menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="page-crumb"><a href="/">Overview</a><span aria-hidden="true">/</span><span>Engineering profile</span><span class="crumb-sep" aria-hidden="true">&middot;</span><a href="/leadership/">Hiring for a leadership role?</a></div>
+
+        <div class="status-pill">
+          <span class="status-indicator"></span>
+          <span class="status-text">Authorized to work in the US for any employer (TN Visa / USMCA eligible)</span>
+        </div>
+
+        <h1 class="hero-title">
+          Architecting high-throughput <br>
+          <span class="gradient-text">distributed systems</span> &amp; AI workflows
+        </h1>
+
+        <p class="hero-subtitle">
+          <strong>Senior Software Engineer &amp; distributed systems architect</strong> with 12+ years of production experience and the <strong>2024 Dell GRIT Award</strong>. Built .NET Core services and Angular frontends for the global <strong>dell.com cart &amp; checkout across 100+ countries</strong>, owned the <strong>CEMEX GO middleware across 21 countries</strong>, and now works with AI agents connected through MCP, with a human reviewing what ships.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#experience" class="btn btn-primary btn-lg"><span>Explore track record</span><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <button class="btn btn-outline btn-lg" data-open-resumes aria-haspopup="dialog"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span>Download tailored resumes</span></button>
+          <a href="https://github.com/martinnv6" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-lg" aria-label="GitHub profile"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg><span>GitHub</span></a>
+          <a href="https://www.linkedin.com/in/martinnv6/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-lg" aria-label="LinkedIn profile"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg><span>LinkedIn</span></a>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-value">100+</div>
+            <div class="metric-label">Countries served</div>
+            <div class="metric-sub">dell.com cart &amp; checkout services on PCF</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">21</div>
+            <div class="metric-label">Countries, 8 go-lives</div>
+            <div class="metric-sub">CEMEX GO .NET middleware</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">12+</div>
+            <div class="metric-label">Years of enterprise .NET</div>
+            <div class="metric-sub">Distributed systems, Redis, Kafka, RabbitMQ, SQL Server</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">M.S.</div>
+            <div class="metric-label">Data Science (UANL)</div>
+            <div class="metric-sub">Coursework completed; thesis on AI agents in progress</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pillars -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Engineering philosophy</div>
+          <h2 class="section-title">Enterprise fundamentals, measured performance, disciplined AI</h2>
+          <p class="section-description">Distributed systems fundamentals, data-driven observability and AI assistance that stays under engineering control.</p>
+        </div>
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            
+            <div class="pillar-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+            <h3 class="pillar-title">High-throughput microservices</h3>
+            <p class="pillar-text">Resilient .NET backends and multi-threaded services for global e-commerce and logistics platforms that take seasonal peak traffic.</p>
+            <div class="pillar-tags"><span>C# / .NET</span><span>Microservices</span><span>DDD</span><span>SOLID</span></div>
+          </div>
+          <div class="pillar-card">
+            
+            <div class="pillar-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+            <h3 class="pillar-title">Cloud, caching &amp; event streaming</h3>
+            <p class="pillar-text">Redis caching and invalidation, asynchronous messaging with Kafka and RabbitMQ, and zero-downtime deployments on Cloud Foundry and Azure.</p>
+            <div class="pillar-tags"><span>Kafka</span><span>Redis</span><span>RabbitMQ</span><span>Azure</span><span>PCF</span></div>
+          </div>
+          <div class="pillar-card">
+            
+            <div class="pillar-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+            <h3 class="pillar-title">Data-driven observability</h3>
+            <p class="pillar-text">Dashboards for P50/P95/P99 latency and conversion built from Splunk and Katana data in Power BI, plus Dynatrace, Splunk and Tableau, backed by data science training.</p>
+            <div class="pillar-tags"><span>Dynatrace</span><span>Splunk</span><span>Power BI</span><span>P99 latency</span></div>
+          </div>
+          <div class="pillar-card highlighted-pillar">
+            <div class="pillar-badge">Current focus</div>
+            <div class="pillar-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M12 6v6l4 2"/></svg></div>
+            <h3 class="pillar-title">AI agents in the SDLC</h3>
+            <p class="pillar-text">Devin connected through MCP to Jira, GitLab, Figma, Miro and Outlook, plus agent skills for the team's environments. Every change still goes through human review and the same quality gates.</p>
+            <div class="pillar-tags"><span>MCP</span><span>Devin</span><span>Claude</span><span>Agent skills</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Career history</div>
+          <h2 class="section-title">Enterprise track record</h2>
+          <p class="section-description">12+ years delivering backend architectures, high-availability APIs and modernization projects.</p>
+        </div>
+        <div class="filter-tabs" id="experience-filters" role="tablist" aria-label="Filter roles">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All roles</button>
+          <button class="filter-btn" data-filter="dell" role="tab" aria-selected="false">Dell Technologies</button>
+          <button class="filter-btn" data-filter="judicial" role="tab" aria-selected="false">Court &amp; Judicial</button>
+          <button class="filter-btn" data-filter="pge" role="tab" aria-selected="false">PG&amp;E</button>
+          <button class="filter-btn" data-filter="cemex" role="tab" aria-selected="false">CEMEX</button>
+          <button class="filter-btn" data-filter="earlier" role="tab" aria-selected="false">Earlier</button>
+        </div>
+        <div class="timeline" id="experience-timeline">
+          <article class="timeline-item" data-category="dell">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="card-header">
+                <div class="role-info">
+                  <h3 class="role-title">Senior Software Engineer</h3>
+                  <div class="company-name">Dell Technologies &middot; Austin, TX (remote)</div>
+                </div>
+                <div class="role-meta">
+                  <span class="role-date">Jun 2022 &ndash; Sep 2026</span>
+                  <span class="award-tag">🏆 2024 Dell GRIT Award</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="role-summary">Full-stack work on the dell.com unified shopping cart for <strong>100+ countries</strong>, handling millions of cart and checkout sessions a day, on Dell's Pivotal Cloud Foundry platform. About 70% backend .NET in the first two years and about 70% frontend Angular 14&ndash;16 in the last two. Started as an AllianceIT consultant; full-time Dell employee from April 2023. The role ended in September 2026 in a company workforce reduction.</p>
+                <ul class="bullet-list">
+                  <li><strong>Services:</strong> designed, built and operated .NET Core 6 services and Web APIs for the cart, with Redis caching and RabbitMQ and Kafka messaging.</li>
+                  <li><strong>Angular modernization:</strong> migrated checkout modules from Angular 14 to 15 and built reusable RxJS-based components.</li>
+                  <li><strong>Testing:</strong> Karma and Jasmine unit tests plus automated Playwright tests for response times.</li>
+                  <li><strong>Pipelines:</strong> designed and tested the team's GitLab / PCF / Terraform / KeyVault pipelines; releases gated on SonarQube coverage plus smoke, performance, integration and functional tests.</li>
+                  <li><strong>Observability:</strong> Power BI dashboards for P50/P95/P99 latency and conversion from Splunk and Katana data; dashboards in Dynatrace, Splunk and Tableau; ETL into MongoDB and Splunk for the data science and recommendations teams.</li>
+                  <li><strong>AI in the SDLC:</strong> Devin connected through MCP to Atlassian, GitLab, Miro, Figma and Outlook, plus a skills repository for the team's development environments.</li>
+                </ul>
+                <div class="tech-pill-list"><span class="tech-pill">Angular 14&ndash;16</span><span class="tech-pill">TypeScript &amp; RxJS</span><span class="tech-pill">Karma &amp; Jasmine</span><span class="tech-pill">Playwright</span><span class="tech-pill">.NET Core 6 &amp; C#</span><span class="tech-pill">Redis</span><span class="tech-pill">Kafka &amp; RabbitMQ</span><span class="tech-pill">PCF</span><span class="tech-pill">Dynatrace &amp; Splunk</span><span class="tech-pill">MCP</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="timeline-item" data-category="judicial">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="card-header">
+                <div class="role-info">
+                  <h3 class="role-title">Principal Software Engineer (Technical Lead)</h3>
+                  <div class="company-name">AllianceIT &rarr; TechShare, CJIS judicial platforms &middot; Austin, TX</div>
+                </div>
+                <div class="role-meta">
+                  <span class="role-date">May 2020 &ndash; Jun 2022</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="role-summary">Architecture and delivery for the Jail, Court and Indigent Defense portals of the Criminal Justice Information System for Texas urban counties. Technical lead for 9 senior engineers.</p>
+                <ul class="bullet-list">
+                  <li>Built web applications on .NET Framework MVC/Razor and .NET Core 3.1 Web API with React frontends, Entity Framework and SQL Server on Azure.</li>
+                  <li>Delivered 15+ secure electronic court-filing workflows; used Azure Blob Storage, Redis and Docker.</li>
+                  <li>Built the CI/CD pipelines with TeamCity and Octopus Deploy for zero-downtime releases.</li>
+                </ul>
+                <div class="tech-pill-list"><span class="tech-pill">.NET Core Web API</span><span class="tech-pill">React</span><span class="tech-pill">Azure SQL</span><span class="tech-pill">Docker</span><span class="tech-pill">Redis</span><span class="tech-pill">TeamCity</span><span class="tech-pill">Octopus Deploy</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="timeline-item" data-category="dell">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="card-header">
+                <div class="role-info">
+                  <h3 class="role-title">Principal Software Engineer (Technical Lead)</h3>
+                  <div class="company-name">AllianceIT &rarr; Dell Customer Integration Layer &middot; Austin, TX</div>
+                </div>
+                <div class="role-meta">
+                  <span class="role-date">Aug 2019 &ndash; May 2020</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="role-summary">Customer Integration Layer (CIL): the WCF/SOAP and REST gateway giving 25+ internal and external applications worldwide access to customer data.</p>
+                <ul class="bullet-list">
+                  <li>Co-led the modernization from WCF/SOAP to REST APIs on .NET Core 3.0 while keeping existing consumers working.</li>
+                  <li>Migrated 3 repositories from TFS, TeamCity and Octopus to GitLab Pipelines and PCF: deployments from 4+ hours to minutes, average rollback from 50 to 4 minutes.</li>
+                  <li>Integrated SAP (data reads), Oracle stored procedures, MySQL and NoSQL stores.</li>
+                </ul>
+                <div class="tech-pill-list"><span class="tech-pill">.NET Core 3.0</span><span class="tech-pill">WCF &rarr; REST</span><span class="tech-pill">Oracle</span><span class="tech-pill">SAP integration</span><span class="tech-pill">GitLab CI/CD</span><span class="tech-pill">PCF</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="timeline-item" data-category="pge">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="card-header">
+                <div class="role-info">
+                  <h3 class="role-title">Senior Software Engineer</h3>
+                  <div class="company-name">AllianceIT &rarr; PG&amp;E wildfire safety &middot; Walnut Creek, CA</div>
+                </div>
+                <div class="role-meta">
+                  <span class="role-date">Feb 2019 &ndash; Aug 2019</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="role-summary">.NET Core REST services for PG&amp;E wildfire safety and emergency decision support.</p>
+                <ul class="bullet-list">
+                  <li>Multi-threaded C# services calling third-party services in parallel (Google Maps, internal mapping systems, Redis).</li>
+                  <li>Complex MongoDB Aggregation Framework queries and the MongoDB 3.4 to 4.0 upgrade; PostgreSQL procedures.</li>
+                  <li>Secured APIs with OAuth, tokens, API keys and SSO; CI/CD with Jenkins, SonarQube and PowerShell.</li>
+                </ul>
+                <div class="tech-pill-list"><span class="tech-pill">.NET Core</span><span class="tech-pill">Async multi-threading</span><span class="tech-pill">MongoDB</span><span class="tech-pill">PostgreSQL</span><span class="tech-pill">OAuth / JWT</span><span class="tech-pill">Jenkins</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="timeline-item" data-category="cemex">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="card-header">
+                <div class="role-info">
+                  <h3 class="role-title">Tech Lead &ndash; Software Engineer</h3>
+                  <div class="company-name">CEMEX &middot; Monterrey, Mexico &amp; global</div>
+                </div>
+                <div class="role-meta">
+                  <span class="role-date">Feb 2017 &ndash; Feb 2019</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="role-summary">CEMEX GO, the company's flagship digital transformation: I owned the .NET middleware layer across <strong>8 go-lives in 21 countries</strong> and led 6 senior engineers.</p>
+                <ul class="bullet-list">
+                  <li>REST services with ASP.NET Web API, Entity Framework and SQL Server 2014 on Azure for Android, iOS, web and B2B clients, including the Foreman and Driver apps, behind Azure API Management; consumed SAP SOAP services.</li>
+                  <li>Analyzed SQL Server execution plans and refactored indexes, stored procedures and LINQ queries to remove high-volume database bottlenecks.</li>
+                  <li>In 2018, flew on one day's notice to Prague, Amsterdam and Budapest to prepare the engineering teams supporting each country's operation.</li>
+                  <li>Contributed to the team's CI/CD and quality practices: Azure DevOps, Jenkins, SonarQube and Selenium UI tests.</li>
+                </ul>
+                <div class="tech-pill-list"><span class="tech-pill">C# .NET</span><span class="tech-pill">ASP.NET Web API</span><span class="tech-pill">Azure API Management</span><span class="tech-pill">SQL Server tuning</span><span class="tech-pill">SAP SOAP</span><span class="tech-pill">Azure DevOps</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="timeline-item" data-category="earlier">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="card-header">
+                <div class="role-info">
+                  <h3 class="role-title">Earlier experience</h3>
+                  <div class="company-name">Interfactura &middot; CDIS UANL &middot; Fixmens &middot; Tubac</div>
+                </div>
+                <div class="role-meta">
+                  <span class="role-date">2008 &ndash; 2017</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="role-summary">From heading a plant's new technology area to building e-invoicing and logistics platforms.</p>
+                <ul class="bullet-list">
+                  <li><strong>Interfactura</strong> (2016&ndash;2017): Scrum with two-week continuous delivery and TDD; rebuilt e-invoicing and payment-supplement modules, built the JUNO B2B factoring bridge, and DDD modules for CHUBB / ACE / ABA.</li>
+                  <li><strong>CDIS UANL</strong> (2014&ndash;2016): CMMI Level 3 logistics platform for fleet, cost, route and customer management with Google Maps route optimization (ASP.NET MVC, SQL Server, AngularJS).</li>
+                  <li><strong>Fixmens</strong> (2012&ndash;2013): IT leader at a family-owned micro-business, delivering .NET and SQL Server solutions for clients.</li>
+                  <li><strong>Tubac</strong> (2008&ndash;2012): Head of Technology; built the manufacturing and inventory system for the production lines.</li>
+                </ul>
+                <div class="tech-pill-list"><span class="tech-pill">ASP.NET MVC</span><span class="tech-pill">SQL Server</span><span class="tech-pill">TDD</span><span class="tech-pill">DDD</span><span class="tech-pill">CMMI L3</span><span class="tech-pill">AngularJS</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Code &amp; systems</div>
+          <h2 class="section-title">Open source, code and research</h2>
+          <p class="section-description">Clean Architecture, test-driven work and applied AI research.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div>
+              <div class="project-header">
+                <div class="project-type">Enterprise .NET 8 &middot; Clean Architecture</div>
+                <a href="https://github.com/martinnv6/URL-Shortener" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View source on GitHub" aria-label="High-Performance URL Shortener on GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+              </div>
+              <h3 class="project-title">High-Performance URL Shortener</h3>
+              <p class="project-description">URL redirection engine built with <strong>.NET 8 Minimal APIs</strong> and strict Clean Architecture, designed for throughput and hardened against the OWASP API Security Top 10.</p>
+              <ul class="project-features">
+              <li><strong>Non-blocking hot path:</strong> producer-consumer telemetry with <code>System.Threading.Channels</code> (capacity 10,000, <code>DropOldest</code>).</li>
+              <li><strong>Collision-free Base62:</strong> deterministic encoding on auto-incrementing integers.</li>
+              <li><strong>Security hardening:</strong> SSRF protection blocking loopback IPs and sliding-window rate limiting (30 req/min/IP).</li>
+              <li><strong>Test isolation:</strong> xUnit and Moq suites with isolated test databases.</li>
+              </ul>
+              <div class="tech-pill-list"><span class="tech-pill">.NET 8 Minimal API</span><span class="tech-pill">Clean Architecture</span><span class="tech-pill">Channels</span><span class="tech-pill">SSRF protection</span><span class="tech-pill">xUnit</span></div>
+            </div>
+            <div class="project-card-footer"><a href="https://github.com/martinnv6/URL-Shortener" target="_blank" rel="noopener noreferrer" class="link-btn"><span>View repository</span><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+          </article>
+          <article class="project-card">
+            <div>
+              <div class="project-header">
+                <div class="project-type">Domain-Driven Design &middot; .NET 10</div>
+                <a href="https://github.com/martinnv6/The-Smart-Parking-Lot-Rate-Calculator" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View source on GitHub" aria-label="Smart Parking Lot Rate Calculator on GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+              </div>
+              <h3 class="project-title">Smart Parking Lot Rate Calculator</h3>
+              <p class="project-description">Pure domain billing engine for a multi-level smart parking facility that evaluates pricing policies (Early Bird, Night Owl, weekend surcharges, loyalty discounts) with a full audit trail.</p>
+              <ul class="project-features">
+              <li><strong>195 automated tests:</strong> 118 unit, 57 functional and 20 smoke/specification tests, <strong>95.8% line coverage</strong>.</li>
+              <li><strong>Strategy pattern, no framework coupling:</strong> pure evaluation that guarantees the best-value rule for drivers.</li>
+              <li><strong>Readable specification:</strong> table-driven public test matrix for quick scenario checks.</li>
+              </ul>
+              <div class="tech-pill-list"><span class="tech-pill">C# .NET 10</span><span class="tech-pill">Domain-Driven Design</span><span class="tech-pill">195 tests</span><span class="tech-pill">Strategy pattern</span></div>
+            </div>
+            <div class="project-card-footer"><a href="https://github.com/martinnv6/The-Smart-Parking-Lot-Rate-Calculator" target="_blank" rel="noopener noreferrer" class="link-btn"><span>View repository</span><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+          </article>
+          <article class="project-card">
+            <div>
+              <div class="project-header">
+                <div class="project-type">Applied research &middot; UANL M.S.</div>
+                
+              </div>
+              <h3 class="project-title">AI Agents for Enterprise E-commerce (thesis)</h3>
+              <p class="project-description">Master's in Data Science thesis research on AI agents, combining deterministic business rules with LLM-based agent reasoning for enterprise e-commerce.</p>
+              <ul class="project-features">
+              <li><strong>Agentic reasoning pipelines</strong> with constraint solving for high-volume commerce scenarios.</li>
+              <li><strong>Telemetry analysis:</strong> statistical anomaly detection on latency distributions (P95/P99).</li>
+              <li><strong>Neuro-symbolic integration:</strong> rule engines alongside probabilistic LLM reasoning.</li>
+              </ul>
+              <div class="tech-pill-list"><span class="tech-pill">Python</span><span class="tech-pill">AI agents</span><span class="tech-pill">Neuro-symbolic AI</span><span class="tech-pill">Statistical modeling</span></div>
+            </div>
+            <div class="project-card-footer"><span class="badge-completed">Thesis in progress &middot; defense expected Feb&ndash;Mar 2027</span></div>
+          </article>
+          <article class="project-card">
+            <div>
+              <div class="project-header">
+                <div class="project-type">Mobile &middot; Offline-first</div>
+                <a href="https://github.com/martinnv6/loteria-mexicana-app" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View source on GitHub" aria-label="Lotería Mexicana App (Android) on GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+              </div>
+              <h3 class="project-title">Lotería Mexicana App (Android)</h3>
+              <p class="project-description">Offline-first mobile app that evaluates game state instantly, detecting wins and near-wins across up to 10 boards at once with no backend.</p>
+              <ul class="project-features">
+              <li><strong>Offline engine:</strong> instant state updates with haptic and vibration cues.</li>
+              <li><strong>Architecture Decision Records:</strong> documented vision, decisions and roadmap.</li>
+              </ul>
+              <div class="tech-pill-list"><span class="tech-pill">Mobile architecture</span><span class="tech-pill">Offline-first</span><span class="tech-pill">ADRs</span></div>
+            </div>
+            <div class="project-card-footer"><a href="https://github.com/martinnv6/loteria-mexicana-app" target="_blank" rel="noopener noreferrer" class="link-btn"><span>View repository</span><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Core capabilities</div>
+          <h2 class="section-title">Technical skills matrix</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3 class="skill-group-title">Languages &amp; Runtimes</h3>
+            <ul class="skill-items">
+              <li><span class="skill-name">C# (12+ years)</span><span class="skill-tag">Expert</span></li>
+              <li><span class="skill-name">.NET Core 3.x to .NET 10, .NET Framework</span><span class="skill-tag">Expert</span></li>
+              <li><span class="skill-name">ASP.NET Web API &amp; MVC</span><span class="skill-tag">Expert</span></li>
+              <li><span class="skill-name">Angular 14&ndash;16 &amp; RxJS</span><span class="skill-tag">Advanced</span></li>
+              <li><span class="skill-name">TypeScript &amp; JavaScript</span><span class="skill-tag">Advanced</span></li>
+              <li><span class="skill-name">Karma, Jasmine &amp; Playwright</span><span class="skill-tag">Advanced</span></li>
+              <li><span class="skill-name">T-SQL (CTEs, procedures)</span><span class="skill-tag">Expert</span></li>
+              <li><span class="skill-name">Python</span><span class="skill-tag">Proficient</span></li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group-title">Architecture &amp; Patterns</h3>
+            <ul class="skill-items">
+              <li><span class="skill-name">Microservices</span><span class="skill-tag">Expert</span></li>
+              <li><span class="skill-name">Event-driven architecture</span><span class="skill-tag">Advanced</span></li>
+              <li><span class="skill-name">SOLID, TDD &amp; Onion</span><span class="skill-tag">Expert</span></li>
+              <li><span class="skill-name">Domain-Driven Design</span><span class="skill-tag">Advanced</span></li>
+              <li><span class="skill-name">Clean Architecture</span><span class="skill-tag">Advanced</span></li>
+              <li><span class="skill-name">REST / SOAP APIs, OAuth &amp; SSO</span><span class="skill-tag">Expert</span></li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group-title">Messaging &amp; Caching</h3>
+            <ul class="skill-items">
+              <li><span class="skill-name">Redis caching &amp; invalidation</span><span class="skill-tag">Advanced</span></li>
+              <li><span class="skill-name">Apache Kafka</span><span class="skill-tag">Advanced</span></li>
+              <li><span class="skill-name">RabbitMQ</span><span class="skill-tag">Advanced</span></li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group-title">Cloud &amp; DevOps</h3>
+            <ul class="skill-items">
+              <li><span class="skill-name">Pivotal Cloud Foundry (PCF)</span><span class="skill-tag">Expert</span></li>
+              <li><span class="skill-name">Azure (App Services, Functions, APIM, Cosmos DB)</span><span class="skill-tag">Advanced</span></li>
+              <li><span class="skill-name">GitLab Pipelines &amp; Azure DevOps</span><span class="skill-tag">Advanced</span></li>
+              <li><span class="skill-name">TeamCity, Octopus &amp; Jenkins</span><span class="skill-tag">Advanced</span></li>
+              <li><span class="skill-name">Terraform &amp; Docker</span><span class="skill-tag">Proficient</span></li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group-title">Databases &amp; Data</h3>
+            <ul class="skill-items">
+              <li><span class="skill-name">SQL Server (execution plans, index tuning)</span><span class="skill-tag">Expert</span></li>
+              <li><span class="skill-name">MongoDB Aggregation Framework</span><span class="skill-tag">Advanced</span></li>
+              <li><span class="skill-name">Oracle &amp; PostgreSQL</span><span class="skill-tag">Proficient</span></li>
+              <li><span class="skill-name">ETL, SSIS, Power BI &amp; Tableau</span><span class="skill-tag">Advanced</span></li>
+            </ul>
+          </div>
+          <div class="skill-group highlighted-skill-group">
+            <h3 class="skill-group-title">AI &amp; Observability</h3>
+            <ul class="skill-items">
+              <li><span class="skill-name">Model Context Protocol (MCP)</span><span class="skill-tag">Advanced</span></li>
+              <li><span class="skill-name">AI agents: Devin, Claude, Antigravity</span><span class="skill-tag">Advanced</span></li>
+              <li><span class="skill-name">Agent skills &amp; connectors</span><span class="skill-tag">Advanced</span></li>
+              <li><span class="skill-name">Dynatrace &amp; Splunk</span><span class="skill-tag">Advanced</span></li>
+              <li><span class="skill-name">P50/P95/P99 latency analysis</span><span class="skill-tag">Advanced</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Education &amp; honors</div>
+          <h2 class="section-title">Education &amp; recognition</h2>
+        </div>
+        <div class="education-grid">
+          <div class="education-card">
+            <div class="edu-icon" aria-hidden="true">🎓</div>
+            <div>
+              <span class="edu-date">2022 &ndash; 2023 coursework</span>
+              <h3 class="edu-degree">Master's in Data Science</h3>
+              <div class="edu-school">Universidad Autónoma de Nuevo León (UANL)</div>
+              <p class="edu-description">Coursework completed. Thesis on AI agents in preparation, defense expected February&ndash;March 2027.</p>
+            </div>
+          </div>
+          <div class="education-card">
+            <div class="edu-icon" aria-hidden="true">🎓</div>
+            <div>
+              <span class="edu-date">2011 &ndash; 2014</span>
+              <h3 class="edu-degree">B.S. in Computer Science</h3>
+              <div class="edu-school">Universidad Autónoma de Nuevo León (UANL)</div>
+              <p class="edu-description">Foundations in computer architecture, data structures, algorithms and software engineering.</p>
+            </div>
+          </div>
+          <div class="education-card award-card">
+            <div class="edu-icon" aria-hidden="true">🏆</div>
+            <div>
+              <span class="edu-date">2024</span>
+              <h3 class="edu-degree">Dell GRIT Award</h3>
+              <div class="edu-school">Dell Technologies</div>
+              <p class="edu-description">For DellRewards and ShareCart: a multi-team, multi-country solution launched in the US, Canada, France and the Netherlands. <a href="/leadership/#case-study">Read the case study</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <aside class="crosslink-banner">
+        <div>
+          <div class="crosslink-kicker">Hiring for an engineering leadership role?</div>
+          <p class="crosslink-text">See the teams I've led, how I drive delivery across teams, and the DellRewards case study.</p>
+        </div>
+        <a href="/leadership/" class="btn btn-outline btn-sm">Leadership profile <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </aside>
+    </div>
+
+
+    <!-- Contact & Work Authorization -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-header">
+            <div class="section-tag">Direct Communication</div>
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="contact-sub">Open to senior software engineer, principal engineer, architect and technical lead roles in the United States and Mexico.</p>
+          </div>
+
+          <div class="authorization-banner">
+            <div class="banner-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+            <div class="banner-content">
+              <strong>Work authorization:</strong> Authorized to work in the US for any employer (TN Visa / USMCA eligible). Available for roles in Mexico without sponsorship. Open to relocation and to international travel.
+            </div>
+          </div>
+
+          <div class="contact-links-grid">
+            <a href="mailto:martin.nv6@gmail.com" class="contact-link-item">
+              <div class="contact-item-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div class="contact-item-info"><span class="label">Email</span><span class="value">martin.nv6@gmail.com</span></div>
+            </a>
+            <a href="tel:+18184808769" class="contact-link-item">
+              <div class="contact-item-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+              <div class="contact-item-info"><span class="label">Phone</span><span class="value">818-480-8769</span></div>
+            </a>
+            <a href="https://www.linkedin.com/in/martinnv6/" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+              <div class="contact-item-icon"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></div>
+              <div class="contact-item-info"><span class="label">LinkedIn</span><span class="value">in/martinnv6</span></div>
+            </a>
+            <a href="https://github.com/martinnv6" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+              <div class="contact-item-icon"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></div>
+              <div class="contact-item-info"><span class="label">GitHub</span><span class="value">github.com/martinnv6</span></div>
+            </a>
+          </div>
+
+          <div class="location-banner">📍 Based in Mission, TX &middot; Open to relocation in the US and Mexico &middot; Remote or hybrid</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <span class="footer-brand">Martín Navarrete</span>
+        <span class="footer-copyright">&copy; 2026</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/">Overview</a>
+        <a href="/leadership/">Leadership</a>
+        <a href="/engineering/">Engineering</a>
+      </nav>
+      <a href="#header" class="back-to-top" aria-label="Back to top"><span>Back to top</span> <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg></a>
+    </div>
+  </footer>
+
+  <!-- Resume Download Dialog -->
+  <dialog class="modal-dialog" id="resume-dialog" aria-labelledby="dialog-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="dialog-icon"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <div>
+          <h3 class="modal-title" id="dialog-title">Choose a resume</h3>
+          <p class="modal-subtitle">PDF versions tailored to each kind of role</p>
+        </div>
+        <button class="modal-close" id="modal-close-btn" aria-label="Close dialog"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      </div>
+        <h4 class="resume-group-title">Software engineering &amp; architecture</h4>
+        <div class="resume-list">
+          <a href="/assets/resumes/Martin_Navarrete_Senior_Software_Engineer.pdf" download="Martin_Navarrete_Senior_Software_Engineer.pdf" class="resume-option-card">
+            <div class="option-icon" aria-hidden="true">💻</div>
+            <div class="option-text">
+              <span class="option-title">Senior Software Engineer</span>
+              <span class="option-desc">C#, .NET Core, Angular, distributed microservices and caching</span>
+            </div>
+            <span class="btn btn-outline btn-sm">PDF</span>
+          </a>
+          <a href="/assets/resumes/Martin_Navarrete_Principal_Software_Architect.pdf" download="Martin_Navarrete_Principal_Software_Architect.pdf" class="resume-option-card">
+            <div class="option-icon" aria-hidden="true">🏛️</div>
+            <div class="option-text">
+              <span class="option-title">Principal Software Architect</span>
+              <span class="option-desc">System architecture, Cloud Foundry, Azure, Kafka event-driven design, DDD</span>
+            </div>
+            <span class="btn btn-outline btn-sm">PDF</span>
+          </a>
+          <a href="/assets/resumes/Martin_Navarrete_Senior_AI_Engineer.pdf" download="Martin_Navarrete_Senior_AI_Engineer.pdf" class="resume-option-card">
+            <div class="option-icon" aria-hidden="true">🤖</div>
+            <div class="option-text">
+              <span class="option-title">Senior AI Engineer &amp; MCP</span>
+              <span class="option-desc">Model Context Protocol, agentic workflows and human-in-the-loop guardrails</span>
+            </div>
+            <span class="btn btn-outline btn-sm">PDF</span>
+          </a>
+          <a href="/assets/resumes/Martin_Navarrete_ML_Engineer.pdf" download="Martin_Navarrete_ML_Engineer.pdf" class="resume-option-card">
+            <div class="option-icon" aria-hidden="true">📊</div>
+            <div class="option-text">
+              <span class="option-title">Senior Software &amp; Machine Learning Engineer</span>
+              <span class="option-desc">Data science, telemetry, observability and anomaly detection</span>
+            </div>
+            <span class="btn btn-outline btn-sm">PDF</span>
+          </a>
+        </div>
+        <h4 class="resume-group-title">Engineering leadership</h4>
+        <div class="resume-list">
+          <a href="/assets/resumes/Martin_Navarrete_AI_Engineering_Leadership.pdf" download="Martin_Navarrete_AI_Engineering_Leadership.pdf" class="resume-option-card">
+            <div class="option-icon" aria-hidden="true">🧭</div>
+            <div class="option-text">
+              <span class="option-title">AI Engineering Leadership &amp; Developer Platform</span>
+              <span class="option-desc">Technical leadership of 6&ndash;9 engineers, CI/CD and release gating, AI agents in the SDLC (MCP)</span>
+            </div>
+            <span class="btn btn-outline btn-sm">PDF</span>
+          </a>
+          <a href="/assets/resumes/Martin_Navarrete_AI_Engineering_Leadership_ES.pdf" download="Martin_Navarrete_AI_Engineering_Leadership_ES.pdf" class="resume-option-card" hreflang="es">
+            <div class="option-icon" aria-hidden="true">🇲🇽</div>
+            <div class="option-text">
+              <span class="option-title">Liderazgo de Ingeniería e IA (Español)</span>
+              <span class="option-desc">La misma versión de liderazgo, en español</span>
+            </div>
+            <span class="btn btn-outline btn-sm">PDF</span>
+          </a>
+        </div>
+
+      <div class="modal-footer">
+        <span>Need Word or plain text? Write to <a href="mailto:martin.nv6@gmail.com">martin.nv6@gmail.com</a>.</span>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="/app.js"></script>
+</body>
+</html>
