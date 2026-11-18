@@ -7,6 +7,18 @@
   <meta name="description" content="Technical Lead and Senior Software Engineer with 12+ years building high-volume enterprise systems on .NET, Azure and SQL Server. Led teams of 6 to 9 engineers, 2024 Dell GRIT Award, AI agents in the SDLC.">
   <meta name="author" content="Martín Navarrete Villegas">
   <link rel="canonical" href="https://martinnavarrete.dev/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Martín Navarrete Villegas",
+    "url": "https://martinnavarrete.dev/",
+    "jobTitle": "Technical Lead & Senior Software Engineer",
+    "alumniOf": "Universidad Autónoma de Nuevo León",
+    "award": "2024 Dell GRIT Award",
+    "sameAs": ["https://github.com/martinnv6", "https://www.linkedin.com/in/martinnv6/"]
+  }
+  </script>
 
   <!-- Open Graph / Social Meta -->
   <meta property="og:type" content="website">
@@ -14,16 +26,24 @@
   <meta property="og:url" content="https://martinnavarrete.dev/">
   <meta property="og:title" content="Martín Navarrete | Technical Lead &amp; Senior Software Engineer">
   <meta property="og:description" content="12+ years building high-volume enterprise systems for Dell, CEMEX and PG&amp;E. Technical lead of teams of 6 to 9 engineers and 2024 Dell GRIT Award recipient.">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://martinnavarrete.dev/assets/images/og-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_MX">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Martín Navarrete | Technical Lead &amp; Senior Software Engineer">
   <meta name="twitter:description" content="12+ years building high-volume enterprise systems for Dell, CEMEX and PG&amp;E. Technical lead of teams of 6 to 9 engineers and 2024 Dell GRIT Award recipient.">
 
   <!-- Apply the saved theme before first paint -->
-  <script>try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <!-- Language from ?lang= or the saved choice (the Spanish text itself is swapped in by /app.js) -->
+  <script>try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){}try{var q=new URLSearchParams(location.search).get('lang'),l=(q==='es'||q==='en')?q:localStorage.getItem('lang');if(l==='es')document.documentElement.setAttribute('lang','es');}catch(e){}</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2300f2fe'/%3E%3Cstop offset='1' stop-color='%234facfe'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='800' text-anchor='middle' fill='%23080b11'%3EMN%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#080b11">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body data-page="home">
@@ -44,6 +64,7 @@
       <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
         <a href="/" class="nav-link active" aria-current="page">Overview</a>
         <a href="/leadership/" class="nav-link">Leadership</a>
+        <a href="/leadership/#platform" class="nav-link">Platform</a>
         <a href="/engineering/" class="nav-link">Engineering</a>
         <a href="/engineering/#projects" class="nav-link">Projects</a>
       </nav>
@@ -53,6 +74,7 @@
           <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           <span>Resumes</span>
         </button>
+        <button class="lang-toggle" id="lang-toggle" type="button" lang="es" aria-label="Ver en español" title="Ver en español">ES</button>
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light and dark theme" title="Toggle theme">
           <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
           <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -138,6 +160,7 @@
               <li>Six months of cross-team work behind DellRewards (2024 GRIT Award)</li>
               <li>CI/CD that took deployments from 4+ hours to minutes</li>
               <li>AI agents across the SDLC through MCP, plus a team skills repository</li>
+              <li>Platform Engineering path: an open IDP leadership practice and the CNCF CNPE exam (Feb 2027)</li>
             </ul>
             <span class="path-cta">Go to Leadership <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
           </a>
@@ -153,6 +176,40 @@
               <li>Projects with full test suites and a skills matrix</li>
             </ul>
             <span class="path-cta">Go to Engineering <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Target roles -->
+    <section class="section roles-section" id="roles">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Open to</div>
+          <h2 class="section-title">Roles I'm targeting</h2>
+          <p class="section-description">One profile, two tracks. I lead through platforms, standards and influence, and I still ship production code.</p>
+        </div>
+        <div class="roles-grid">
+          <a href="/leadership/" class="role-col role-col-lead">
+            <span class="role-col-tag">01 &middot; Leadership track</span>
+            <ul class="role-list">
+              <li class="role-primary">Head of Platform Engineering</li>
+              <li>Platform Engineering Manager / Director</li>
+              <li>Head of Developer Experience (DevEx)</li>
+              <li>Engineering Manager, Internal Developer Platform (IDP)</li>
+              <li>Head of Software Engineering Office</li>
+            </ul>
+            <span class="role-col-cta">See leadership evidence &rarr;</span>
+          </a>
+          <a href="/engineering/" class="role-col role-col-eng">
+            <span class="role-col-tag">02 &middot; Engineering track</span>
+            <ul class="role-list">
+              <li class="role-primary">Principal / Staff Platform Engineer</li>
+              <li>Principal Software Architect</li>
+              <li>Senior Software Engineer (.NET &amp; distributed systems)</li>
+              <li>Senior AI Engineer (agents &amp; MCP)</li>
+            </ul>
+            <span class="role-col-cta">See engineering track record &rarr;</span>
           </a>
         </div>
       </div>
@@ -332,6 +389,7 @@
     </div>
   </dialog>
 
+  <script src="/i18n.js"></script>
   <script src="/app.js"></script>
 </body>
 </html>

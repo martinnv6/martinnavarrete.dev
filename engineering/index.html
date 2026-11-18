@@ -14,16 +14,24 @@
   <meta property="og:url" content="https://martinnavarrete.dev/engineering/">
   <meta property="og:title" content="Software Engineering | Martín Navarrete">
   <meta property="og:description" content="Senior Software Engineer and architect: .NET Core microservices for dell.com cart and checkout (100+ countries), CEMEX GO middleware (21 countries), projects and skills.">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://martinnavarrete.dev/assets/images/og-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_MX">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Software Engineering | Martín Navarrete">
   <meta name="twitter:description" content="Senior Software Engineer and architect: .NET Core microservices for dell.com cart and checkout (100+ countries), CEMEX GO middleware (21 countries), projects and skills.">
 
   <!-- Apply the saved theme before first paint -->
-  <script>try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <!-- Language from ?lang= or the saved choice (the Spanish text itself is swapped in by /app.js) -->
+  <script>try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){}try{var q=new URLSearchParams(location.search).get('lang'),l=(q==='es'||q==='en')?q:localStorage.getItem('lang');if(l==='es')document.documentElement.setAttribute('lang','es');}catch(e){}</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2300f2fe'/%3E%3Cstop offset='1' stop-color='%234facfe'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='800' text-anchor='middle' fill='%23080b11'%3EMN%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#080b11">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body data-page="engineering">
@@ -44,6 +52,7 @@
       <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
         <a href="/" class="nav-link">Overview</a>
         <a href="/leadership/" class="nav-link">Leadership</a>
+        <a href="/leadership/#platform" class="nav-link">Platform</a>
         <a href="/engineering/" class="nav-link active" aria-current="page">Engineering</a>
         <a href="/engineering/#projects" class="nav-link">Projects</a>
       </nav>
@@ -53,6 +62,7 @@
           <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           <span>Resumes</span>
         </button>
+        <button class="lang-toggle" id="lang-toggle" type="button" lang="es" aria-label="Ver en español" title="Ver en español">ES</button>
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light and dark theme" title="Toggle theme">
           <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
           <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -168,13 +178,13 @@
           <h2 class="section-title">Enterprise track record</h2>
           <p class="section-description">12+ years delivering backend architectures, high-availability APIs and modernization projects.</p>
         </div>
-        <div class="filter-tabs" id="experience-filters" role="tablist" aria-label="Filter roles">
-          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All roles</button>
-          <button class="filter-btn" data-filter="dell" role="tab" aria-selected="false">Dell Technologies</button>
-          <button class="filter-btn" data-filter="judicial" role="tab" aria-selected="false">Court &amp; Judicial</button>
-          <button class="filter-btn" data-filter="pge" role="tab" aria-selected="false">PG&amp;E</button>
-          <button class="filter-btn" data-filter="cemex" role="tab" aria-selected="false">CEMEX</button>
-          <button class="filter-btn" data-filter="earlier" role="tab" aria-selected="false">Earlier</button>
+        <div class="filter-tabs" id="experience-filters" role="group" aria-label="Filter roles">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All roles</button>
+          <button class="filter-btn" data-filter="dell" aria-pressed="false">Dell Technologies</button>
+          <button class="filter-btn" data-filter="judicial" aria-pressed="false">Court &amp; Judicial</button>
+          <button class="filter-btn" data-filter="pge" aria-pressed="false">PG&amp;E</button>
+          <button class="filter-btn" data-filter="cemex" aria-pressed="false">CEMEX</button>
+          <button class="filter-btn" data-filter="earlier" aria-pressed="false">Earlier</button>
         </div>
         <div class="timeline" id="experience-timeline">
           <article class="timeline-item" data-category="dell">
@@ -198,7 +208,7 @@
                   <li><strong>Testing:</strong> Karma and Jasmine unit tests plus automated Playwright tests for response times.</li>
                   <li><strong>Pipelines:</strong> designed and tested the team's GitLab / PCF / Terraform / KeyVault pipelines; releases gated on SonarQube coverage plus smoke, performance, integration and functional tests.</li>
                   <li><strong>Observability:</strong> Power BI dashboards for P50/P95/P99 latency and conversion from Splunk and Katana data; dashboards in Dynatrace, Splunk and Tableau; ETL into MongoDB and Splunk for the data science and recommendations teams.</li>
-                  <li><strong>AI in the SDLC:</strong> Devin connected through MCP to Atlassian, GitLab, Miro, Figma and Outlook, plus a skills repository for the team's development environments.</li>
+                  <li><strong>AI in the SDLC:</strong> GitHub Copilot with human review of every change, then Devin connected through MCP to Atlassian, GitLab, Miro, Figma and Outlook, plus a skills repository for the team's development environments.</li>
                 </ul>
                 <div class="tech-pill-list"><span class="tech-pill">Angular 14&ndash;16</span><span class="tech-pill">TypeScript &amp; RxJS</span><span class="tech-pill">Karma &amp; Jasmine</span><span class="tech-pill">Playwright</span><span class="tech-pill">.NET Core 6 &amp; C#</span><span class="tech-pill">Redis</span><span class="tech-pill">Kafka &amp; RabbitMQ</span><span class="tech-pill">PCF</span><span class="tech-pill">Dynatrace &amp; Splunk</span><span class="tech-pill">MCP</span></div>
               </div>
@@ -242,7 +252,7 @@
               <div class="card-body">
                 <p class="role-summary">Customer Integration Layer (CIL): the WCF/SOAP and REST gateway giving 25+ internal and external applications worldwide access to customer data.</p>
                 <ul class="bullet-list">
-                  <li>Co-led the modernization from WCF/SOAP to REST APIs on .NET Core 3.0 while keeping existing consumers working.</li>
+                  <li>Co-led the modernization from WCF/SOAP to REST APIs on .NET Core 3.0 while keeping existing consumers working, for a gateway with a <strong>99.99% availability SLA</strong> used by 25+ internal and external applications.</li>
                   <li>Migrated 3 repositories from TFS, TeamCity and Octopus to GitLab Pipelines and PCF: deployments from 4+ hours to minutes, average rollback from 50 to 4 minutes.</li>
                   <li>Integrated SAP (data reads), Oracle stored procedures, MySQL and NoSQL stores.</li>
                 </ul>
@@ -456,6 +466,7 @@
               <li><span class="skill-name">GitLab Pipelines &amp; Azure DevOps</span><span class="skill-tag">Advanced</span></li>
               <li><span class="skill-name">TeamCity, Octopus &amp; Jenkins</span><span class="skill-tag">Advanced</span></li>
               <li><span class="skill-name">Terraform &amp; Docker</span><span class="skill-tag">Proficient</span></li>
+              <li><span class="skill-name">Internal Developer Platforms (IDP)</span><span class="skill-tag skill-tag-learning">Learning</span></li>
             </ul>
           </div>
           <div class="skill-group">
@@ -471,7 +482,7 @@
             <h3 class="skill-group-title">AI &amp; Observability</h3>
             <ul class="skill-items">
               <li><span class="skill-name">Model Context Protocol (MCP)</span><span class="skill-tag">Advanced</span></li>
-              <li><span class="skill-name">AI agents: Devin, Claude, Antigravity</span><span class="skill-tag">Advanced</span></li>
+              <li><span class="skill-name">AI agents &amp; assistants: Devin, Claude, Antigravity, GitHub Copilot</span><span class="skill-tag">Advanced</span></li>
               <li><span class="skill-name">Agent skills &amp; connectors</span><span class="skill-tag">Advanced</span></li>
               <li><span class="skill-name">Dynatrace &amp; Splunk</span><span class="skill-tag">Advanced</span></li>
               <li><span class="skill-name">P50/P95/P99 latency analysis</span><span class="skill-tag">Advanced</span></li>
@@ -514,6 +525,15 @@
               <h3 class="edu-degree">Dell GRIT Award</h3>
               <div class="edu-school">Dell Technologies</div>
               <p class="edu-description">For DellRewards and ShareCart: a multi-team, multi-country solution launched in the US, Canada, France and the Netherlands. <a href="/leadership/#case-study">Read the case study</a>.</p>
+            </div>
+          </div>
+          <div class="education-card cert-card">
+            <div class="edu-icon" aria-hidden="true">📜</div>
+            <div>
+              <span class="edu-date">Target date &middot; Feb 2027</span>
+              <h3 class="edu-degree">Certified Cloud Native Platform Engineer (CNPE)</h3>
+              <div class="edu-school">Cloud Native Computing Foundation (CNCF)</div>
+              <p class="edu-description">Next step on my Platform Engineering path, prepared through an open <a href="/leadership/#platform">IDP leadership practice</a>.</p>
             </div>
           </div>
         </div>
@@ -662,6 +682,7 @@
     </div>
   </dialog>
 
+  <script src="/i18n.js"></script>
   <script src="/app.js"></script>
 </body>
 </html>
