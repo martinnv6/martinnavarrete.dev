@@ -63,10 +63,26 @@
 
       <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
         <a href="/" class="nav-link active" aria-current="page">Overview</a>
-        <a href="/leadership/" class="nav-link">Leadership</a>
-        <a href="/leadership/#platform" class="nav-link">Platform</a>
-        <a href="/engineering/" class="nav-link">Engineering</a>
-        <a href="/engineering/#projects" class="nav-link">Projects</a>
+        <div class="nav-track nav-track-lead">
+          <a href="/leadership/" class="nav-link nav-track-link" data-num="01">Leadership</a>
+          <div class="nav-sub">
+            <a href="/leadership/#teams" class="nav-sublink">Teams I've led</a>
+            <a href="/leadership/#how-i-lead" class="nav-sublink">How I lead</a>
+            <a href="/leadership/#case-study" class="nav-sublink">Case study</a>
+            <a href="/leadership/#evidence" class="nav-sublink">More evidence</a>
+            <a href="/leadership/#platform" class="nav-sublink">Platform Engineering path</a>
+            <a href="/leadership/#looking-for" class="nav-sublink">What I'm looking for</a>
+          </div>
+        </div>
+        <div class="nav-track nav-track-eng">
+          <a href="/engineering/" class="nav-link nav-track-link" data-num="02">Engineering</a>
+          <div class="nav-sub">
+            <a href="/engineering/#experience" class="nav-sublink">Career history</a>
+            <a href="/engineering/#projects" class="nav-sublink">Projects</a>
+            <a href="/engineering/#skills" class="nav-sublink">Skills</a>
+            <a href="/engineering/#education" class="nav-sublink">Education &amp; honors</a>
+          </div>
+        </div>
       </nav>
 
       <div class="header-actions">
@@ -330,60 +346,68 @@
         </div>
         <button class="modal-close" id="modal-close-btn" aria-label="Close dialog"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
       </div>
-        <h4 class="resume-group-title">Engineering leadership</h4>
-        <div class="resume-list">
-          <a href="/assets/resumes/Martin_Navarrete_AI_Engineering_Leadership.pdf" download="Martin_Navarrete_AI_Engineering_Leadership.pdf" class="resume-option-card">
-            <div class="option-icon" aria-hidden="true">🧭</div>
-            <div class="option-text">
-              <span class="option-title">AI Engineering Leadership &amp; Developer Platform</span>
-              <span class="option-desc">Technical leadership of 6&ndash;9 engineers, CI/CD and release gating, AI agents in the SDLC (MCP)</span>
+        <div class="resume-groups">
+          <section class="resume-group resume-group-lead" aria-labelledby="rg-lead">
+            <h4 class="resume-group-title" id="rg-lead" data-num="01">Engineering leadership</h4>
+            <div class="resume-list">
+              <a href="/assets/resumes/Martin_Navarrete_AI_Engineering_Leadership.pdf" download="Martin_Navarrete_AI_Engineering_Leadership.pdf" class="resume-option-card">
+                <div class="option-icon" aria-hidden="true">🧭</div>
+                <div class="option-text">
+                  <span class="option-title">AI Engineering Leadership &amp; Developer Platform</span>
+                  <span class="option-desc">Technical leadership of 6&ndash;9 engineers, CI/CD and release gating, AI agents in the SDLC (MCP)</span>
+                </div>
+                <span class="btn btn-outline btn-sm">PDF</span>
+              </a>
+              <a href="/assets/resumes/Martin_Navarrete_AI_Engineering_Leadership_ES.pdf" download="Martin_Navarrete_AI_Engineering_Leadership_ES.pdf" class="resume-option-card" hreflang="es">
+                <div class="option-icon" aria-hidden="true">🇲🇽</div>
+                <div class="option-text">
+                  <span class="option-title">Liderazgo de Ingeniería e IA (Español)</span>
+                  <span class="option-desc">La misma versión de liderazgo, en español</span>
+                </div>
+                <span class="btn btn-outline btn-sm">PDF</span>
+              </a>
             </div>
-            <span class="btn btn-outline btn-sm">PDF</span>
-          </a>
-          <a href="/assets/resumes/Martin_Navarrete_AI_Engineering_Leadership_ES.pdf" download="Martin_Navarrete_AI_Engineering_Leadership_ES.pdf" class="resume-option-card" hreflang="es">
-            <div class="option-icon" aria-hidden="true">🇲🇽</div>
-            <div class="option-text">
-              <span class="option-title">Liderazgo de Ingeniería e IA (Español)</span>
-              <span class="option-desc">La misma versión de liderazgo, en español</span>
+          </section>
+          <section class="resume-group resume-group-eng" aria-labelledby="rg-eng">
+            <h4 class="resume-group-title" id="rg-eng" data-num="02">Software engineering &amp; architecture</h4>
+            <div class="resume-list">
+              <a href="/assets/resumes/Martin_Navarrete_Senior_Software_Engineer.pdf" download="Martin_Navarrete_Senior_Software_Engineer.pdf" class="resume-option-card">
+                <div class="option-icon" aria-hidden="true">💻</div>
+                <div class="option-text">
+                  <span class="option-title">Senior Software Engineer</span>
+                  <span class="option-desc">C#, .NET Core, Angular, distributed microservices and caching</span>
+                </div>
+                <span class="btn btn-outline btn-sm">PDF</span>
+              </a>
+              <a href="/assets/resumes/Martin_Navarrete_Principal_Software_Architect.pdf" download="Martin_Navarrete_Principal_Software_Architect.pdf" class="resume-option-card">
+                <div class="option-icon" aria-hidden="true">🏛️</div>
+                <div class="option-text">
+                  <span class="option-title">Principal Software Architect</span>
+                  <span class="option-desc">System architecture, Cloud Foundry, Azure, Kafka event-driven design, DDD</span>
+                </div>
+                <span class="btn btn-outline btn-sm">PDF</span>
+              </a>
+              <a href="/assets/resumes/Martin_Navarrete_Senior_AI_Engineer.pdf" download="Martin_Navarrete_Senior_AI_Engineer.pdf" class="resume-option-card">
+                <div class="option-icon" aria-hidden="true">🤖</div>
+                <div class="option-text">
+                  <span class="option-title">Senior AI Engineer &amp; MCP</span>
+                  <span class="option-desc">Model Context Protocol, agentic workflows and human-in-the-loop guardrails</span>
+                </div>
+                <span class="btn btn-outline btn-sm">PDF</span>
+              </a>
+              <a href="/assets/resumes/Martin_Navarrete_ML_Engineer.pdf" download="Martin_Navarrete_ML_Engineer.pdf" class="resume-option-card">
+                <div class="option-icon" aria-hidden="true">📊</div>
+                <div class="option-text">
+                  <span class="option-title">Senior Software &amp; Machine Learning Engineer</span>
+                  <span class="option-desc">Data science, telemetry, observability and anomaly detection</span>
+                </div>
+                <span class="btn btn-outline btn-sm">PDF</span>
+              </a>
             </div>
-            <span class="btn btn-outline btn-sm">PDF</span>
-          </a>
+          </section>
         </div>
-        <h4 class="resume-group-title">Software engineering &amp; architecture</h4>
-        <div class="resume-list">
-          <a href="/assets/resumes/Martin_Navarrete_Senior_Software_Engineer.pdf" download="Martin_Navarrete_Senior_Software_Engineer.pdf" class="resume-option-card">
-            <div class="option-icon" aria-hidden="true">💻</div>
-            <div class="option-text">
-              <span class="option-title">Senior Software Engineer</span>
-              <span class="option-desc">C#, .NET Core, Angular, distributed microservices and caching</span>
-            </div>
-            <span class="btn btn-outline btn-sm">PDF</span>
-          </a>
-          <a href="/assets/resumes/Martin_Navarrete_Principal_Software_Architect.pdf" download="Martin_Navarrete_Principal_Software_Architect.pdf" class="resume-option-card">
-            <div class="option-icon" aria-hidden="true">🏛️</div>
-            <div class="option-text">
-              <span class="option-title">Principal Software Architect</span>
-              <span class="option-desc">System architecture, Cloud Foundry, Azure, Kafka event-driven design, DDD</span>
-            </div>
-            <span class="btn btn-outline btn-sm">PDF</span>
-          </a>
-          <a href="/assets/resumes/Martin_Navarrete_Senior_AI_Engineer.pdf" download="Martin_Navarrete_Senior_AI_Engineer.pdf" class="resume-option-card">
-            <div class="option-icon" aria-hidden="true">🤖</div>
-            <div class="option-text">
-              <span class="option-title">Senior AI Engineer &amp; MCP</span>
-              <span class="option-desc">Model Context Protocol, agentic workflows and human-in-the-loop guardrails</span>
-            </div>
-            <span class="btn btn-outline btn-sm">PDF</span>
-          </a>
-          <a href="/assets/resumes/Martin_Navarrete_ML_Engineer.pdf" download="Martin_Navarrete_ML_Engineer.pdf" class="resume-option-card">
-            <div class="option-icon" aria-hidden="true">📊</div>
-            <div class="option-text">
-              <span class="option-title">Senior Software &amp; Machine Learning Engineer</span>
-              <span class="option-desc">Data science, telemetry, observability and anomaly detection</span>
-            </div>
-            <span class="btn btn-outline btn-sm">PDF</span>
-          </a>
-        </div>
+        <p class="resume-other resume-other-eng">Looking for a technical version? <a href="/engineering/#resumes">See the engineering resumes</a></p>
+        <p class="resume-other resume-other-lead">Hiring for a leadership role? <a href="/leadership/#resumes">See the leadership resumes</a></p>
 
       <div class="modal-footer">
         <span>Need Word or plain text? Write to <a href="mailto:martin.nv6@gmail.com">martin.nv6@gmail.com</a>.</span>

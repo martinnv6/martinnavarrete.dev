@@ -825,5 +825,19 @@ window.I18N_ES = {
   "<span class=\"piece-what\">A shared layer across countries</span><span class=\"piece-how\">The .NET middleware of CEMEX GO through 8 go-lives in 21 countries.</span><span class=\"piece-where\">CEMEX</span>":
     "<span class=\"piece-what\">Una capa compartida entre países</span><span class=\"piece-how\">El middleware .NET de CEMEX GO en 8 salidas a producción en 21 países.</span><span class=\"piece-where\">CEMEX</span>",
   "What I haven't done yet is run all of this as one product for a whole company, with a dedicated team and formal metrics. That's the job I'm preparing for.":
-    "Lo que todavía no he hecho es operar todo esto como un solo producto para toda una compañía, con un equipo dedicado y métricas formales. Ese es el puesto para el que me estoy preparando."
+    "Lo que todavía no he hecho es operar todo esto como un solo producto para toda una compañía, con un equipo dedicado y métricas formales. Ese es el puesto para el que me estoy preparando.",
+
+  // ---- Header paths and resume dialog per track ----
+  "Case study":
+    "Caso de estudio",
+  "Skills":
+    "Habilidades",
+  "Leadership sections":
+    "Secciones de liderazgo",
+  "Engineering sections":
+    "Secciones de ingeniería",
+  "Looking for a technical version? <a href=\"/engineering/#resumes\">See the engineering resumes</a>":
+    "¿Buscas una versión técnica? <a href=\"/engineering/#resumes\">Ver los CV de ingeniería</a>",
+  "Hiring for a leadership role? <a href=\"/leadership/#resumes\">See the leadership resumes</a>":
+    "¿Buscas un perfil de liderazgo? <a href=\"/leadership/#resumes\">Ver los CV de liderazgo</a>"
 };

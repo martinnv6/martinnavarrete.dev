@@ -126,6 +126,13 @@ function initResumeModal() {
     openButtons.forEach(btn => btn.setAttribute('aria-expanded', 'false'));
   });
 
+  // "See the leadership / engineering resumes" links land on /<track>/#resumes:
+  // open the dialog straight away, and drop the hash so a reload doesn't reopen it.
+  if (location.hash === '#resumes' && typeof dialog.showModal === 'function') {
+    dialog.showModal();
+    history.replaceState(null, '', location.pathname + location.search);
+  }
+
   function closeDialog() {
     dialog.close();
     openButtons.forEach(btn => btn.setAttribute('aria-expanded', 'false'));
@@ -138,7 +145,7 @@ function initResumeModal() {
 function initMobileNavigation() {
   const mobileToggle = document.getElementById('mobile-toggle');
   const navMenu = document.getElementById('nav-menu');
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.nav-link, .nav-sublink');
 
   if (!mobileToggle || !navMenu) return;
 

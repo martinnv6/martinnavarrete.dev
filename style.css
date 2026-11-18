@@ -2117,7 +2117,7 @@ body {
 
 /* Header: the ES button adds a control, so collapse the nav earlier and keep
    the phone header to logo + language + theme + menu */
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
   .nav-menu {
     display: none;
     position: absolute;
@@ -2156,6 +2156,222 @@ body {
   .header-actions {
     flex-shrink: 0;
   }
+}
+
+
+/* ==========================================================================
+   Two main paths in the header: 01 Leadership / 02 Engineering
+   ========================================================================== */
+.nav-track {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.nav-track-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.nav-track-link::before {
+  content: attr(data-num);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.1rem 0.35rem;
+  border-radius: var(--radius-sm);
+  color: var(--bg-primary);
+  background: var(--accent-cyan);
+}
+.nav-track-lead .nav-track-link::before {
+  background: var(--accent-amber);
+}
+/* small caret that says "there is more inside" */
+.nav-track-link {
+  padding-right: 0.9rem;
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position: right 0.3rem center, right 0 center;
+  background-size: 0.3rem 0.3rem, 0.3rem 0.3rem;
+  background-repeat: no-repeat;
+}
+.nav-sub {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -0.75rem;
+  margin-top: 0.6rem;
+  min-width: 15rem;
+  flex-direction: column;
+  padding: 0.4rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-top: 3px solid var(--accent-cyan);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  z-index: 120;
+}
+.nav-track-lead .nav-sub {
+  border-top-color: var(--accent-amber);
+}
+/* invisible bridge so the menu doesn't close while the pointer moves down */
+.nav-sub::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -0.9rem;
+  height: 0.9rem;
+}
+.nav-track:hover .nav-sub,
+.nav-track:focus-within .nav-sub {
+  display: flex;
+}
+.nav-sublink {
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.nav-sublink:hover,
+.nav-sublink:focus-visible {
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+}
+
+@media (max-width: 900px) {
+  /* Mobile menu: each path is a heading with its sections listed under it */
+  .nav-menu {
+    align-items: flex-start;
+  }
+  .nav-track {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .nav-track-link {
+    font-size: 1rem;
+    background-image: none;
+    padding-right: 0;
+  }
+  .nav-sub,
+  .nav-track:hover .nav-sub,
+  .nav-track:focus-within .nav-sub {
+    display: flex;
+    position: static;
+    margin: 0.4rem 0 0 0.35rem;
+    padding: 0 0 0 0.9rem;
+    min-width: 0;
+    background: none;
+    border: none;
+    border-left: 2px solid var(--accent-cyan);
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .nav-track-lead .nav-sub {
+    border-left-color: var(--accent-amber);
+  }
+  .nav-sub::before {
+    display: none;
+  }
+  .nav-sublink {
+    padding: 0.35rem 0;
+    white-space: normal;
+  }
+}
+
+/* Section links inside each track banner */
+.track-subnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+.track-sublink {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  padding: 0.25rem 0.75rem;
+  background: var(--bg-card);
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+.track-sublink:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-cyan);
+}
+.track-lead .track-sublink:hover {
+  border-color: var(--accent-amber);
+}
+
+/* ==========================================================================
+   Resume dialog: one track per page, both on the overview
+   ========================================================================== */
+.resume-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.resume-group {
+  border: 1px solid var(--border-subtle);
+  border-top: 3px solid var(--accent-cyan);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+}
+.resume-group-lead {
+  border-top-color: var(--accent-amber);
+}
+.resume-group .resume-list {
+  margin-bottom: 0;
+}
+.resume-groups .resume-group-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0;
+}
+.resume-groups .resume-group-title::before {
+  content: attr(data-num);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.1rem 0.35rem;
+  border-radius: var(--radius-sm);
+  color: var(--bg-primary);
+  background: var(--accent-cyan);
+}
+.resume-group-lead .resume-group-title::before {
+  background: var(--accent-amber);
+}
+.resume-other {
+  display: none;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+.resume-other a {
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+/* On a track page show only that track's resumes, plus a link to the other */
+body[data-page="leadership"] .resume-group-eng,
+body[data-page="engineering"] .resume-group-lead {
+  display: none;
+}
+body[data-page="leadership"] .resume-group,
+body[data-page="engineering"] .resume-group {
+  border: none;
+  padding: 0;
+}
+body[data-page="leadership"] .resume-other-eng,
+body[data-page="engineering"] .resume-other-lead {
+  display: block;
 }
 
 /* Respect reduced-motion preferences */
