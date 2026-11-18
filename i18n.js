@@ -797,5 +797,33 @@ window.I18N_ES = {
   "<span>Leadership</span>":
     "<span>Liderazgo</span>",
   "<span>Engineering</span>":
-    "<span>Ingeniería</span>"
+    "<span>Ingeniería</span>",
+
+  // ---- Track separators and platform pieces ----
+  "Teams of 6 to 9 engineers, agreement across teams without formal authority, vendors and budget, and the move into platform leadership.":
+    "Equipos de 6 a 9 ingenieros, acuerdos entre equipos sin autoridad formal, proveedores y presupuesto, y el paso al liderazgo de plataforma.",
+  "02 · Engineering":
+    "02 · Ingeniería",
+  "01 · Leadership":
+    "01 · Liderazgo",
+  "12+ years of hands-on delivery: .NET services, Angular front ends, caching and event streaming, data and applied AI.":
+    "Más de 12 años de entrega práctica: servicios .NET, frontends en Angular, caché y streaming de eventos, datos e IA aplicada.",
+  "Platform pieces I've already built":
+    "Piezas de plataforma que ya construí",
+  "We didn't call it an internal developer platform, but these are the parts of one that other teams used.":
+    "No lo llamábamos plataforma interna para desarrolladores, pero estas son las piezas de una que usaron otros equipos.",
+  "<span class=\"piece-what\">Shared service other teams consume</span><span class=\"piece-how\">The Customer Integration Layer: the WCF/SOAP and REST gateway behind 25+ internal and external applications. I co-led its move to REST on .NET Core 3.0.</span><span class=\"piece-where\">Dell CIL</span>":
+    "<span class=\"piece-what\">Servicio compartido que consumen otros equipos</span><span class=\"piece-how\">El Customer Integration Layer: el gateway WCF/SOAP y REST detrás de más de 25 aplicaciones internas y externas. Colideré su migración a REST en .NET Core 3.0.</span><span class=\"piece-where\">Dell CIL</span>",
+  "<span class=\"piece-what\">Pipelines and environments</span><span class=\"piece-how\">Moved 3 repositories to GitLab Pipelines and PCF, trained the team and ran the non-production environments. TeamCity and Octopus pipelines for zero-downtime releases.</span><span class=\"piece-where\">Dell CIL · TechShare</span>":
+    "<span class=\"piece-what\">Pipelines y entornos</span><span class=\"piece-how\">Migré 3 repositorios a GitLab Pipelines y PCF, capacité al equipo y administré los entornos no productivos. Pipelines con TeamCity y Octopus para liberaciones sin tiempo de inactividad.</span><span class=\"piece-where\">Dell CIL · TechShare</span>",
+  "<span class=\"piece-what\">Standards and a recommended path</span><span class=\"piece-how\">Architecture guides, code patterns, libraries and data schemas used by my team of 9 and adopted by other teams.</span><span class=\"piece-where\">TechShare</span>":
+    "<span class=\"piece-what\">Estándares y un camino recomendado</span><span class=\"piece-how\">Guías de arquitectura, patrones de código, librerías y esquemas de datos que usó mi equipo de 9 y que adoptaron otros equipos.</span><span class=\"piece-where\">TechShare</span>",
+  "<span class=\"piece-what\">Developer tooling</span><span class=\"piece-how\">Agent skills and connectors for the development environments, used by my whole sub-team and forked by other teams.</span><span class=\"piece-where\">Dell</span>":
+    "<span class=\"piece-what\">Herramientas para desarrolladores</span><span class=\"piece-how\">Skills y conectores de agentes para los entornos de desarrollo, que usa todo mi subequipo y de los que otros equipos hicieron fork.</span><span class=\"piece-where\">Dell</span>",
+  "<span class=\"piece-what\">Building on a corporate platform</span><span class=\"piece-how\">Designed my team's pipelines on Dell's standard GitLab, PCF, Terraform and KeyVault pipelines.</span><span class=\"piece-where\">Dell cart</span>":
+    "<span class=\"piece-what\">Construir sobre una plataforma corporativa</span><span class=\"piece-how\">Diseñé los pipelines de mi equipo sobre los pipelines estándar de Dell en GitLab, PCF, Terraform y KeyVault.</span><span class=\"piece-where\">Carrito de Dell</span>",
+  "<span class=\"piece-what\">A shared layer across countries</span><span class=\"piece-how\">The .NET middleware of CEMEX GO through 8 go-lives in 21 countries.</span><span class=\"piece-where\">CEMEX</span>":
+    "<span class=\"piece-what\">Una capa compartida entre países</span><span class=\"piece-how\">El middleware .NET de CEMEX GO en 8 salidas a producción en 21 países.</span><span class=\"piece-where\">CEMEX</span>",
+  "What I haven't done yet is run all of this as one product for a whole company, with a dedicated team and formal metrics. That's the job I'm preparing for.":
+    "Lo que todavía no he hecho es operar todo esto como un solo producto para toda una compañía, con un equipo dedicado y métricas formales. Ese es el puesto para el que me estoy preparando."
 };

@@ -78,6 +78,17 @@
   </header>
 
   <main id="main">
+    <!-- Track separator: 01 Leadership -->
+    <div class="track-banner track-lead">
+      <div class="container track-banner-inner">
+        <span class="track-num" aria-hidden="true">01</span>
+        <div class="track-text">
+          <div class="track-label">Leadership</div>
+          <p class="track-desc">Teams of 6 to 9 engineers, agreement across teams without formal authority, vendors and budget, and the move into platform leadership.</p>
+        </div>
+        <a href="/engineering/" class="track-switch"><span>02 · Engineering</span><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+    </div>
     <!-- Hero -->
     <section class="hero-section" id="hero">
       <div class="container hero-container">
@@ -387,6 +398,20 @@
               </li>
             </ol>
           </div>
+        </div>
+
+        <div class="platform-pieces">
+          <h3 class="pieces-title">Platform pieces I've already built</h3>
+          <p class="pieces-intro">We didn't call it an internal developer platform, but these are the parts of one that other teams used.</p>
+          <ul class="pieces-list">
+            <li><span class="piece-what">Shared service other teams consume</span><span class="piece-how">The Customer Integration Layer: the WCF/SOAP and REST gateway behind 25+ internal and external applications. I co-led its move to REST on .NET Core 3.0.</span><span class="piece-where">Dell CIL</span></li>
+            <li><span class="piece-what">Pipelines and environments</span><span class="piece-how">Moved 3 repositories to GitLab Pipelines and PCF, trained the team and ran the non-production environments. TeamCity and Octopus pipelines for zero-downtime releases.</span><span class="piece-where">Dell CIL · TechShare</span></li>
+            <li><span class="piece-what">Standards and a recommended path</span><span class="piece-how">Architecture guides, code patterns, libraries and data schemas used by my team of 9 and adopted by other teams.</span><span class="piece-where">TechShare</span></li>
+            <li><span class="piece-what">Developer tooling</span><span class="piece-how">Agent skills and connectors for the development environments, used by my whole sub-team and forked by other teams.</span><span class="piece-where">Dell</span></li>
+            <li><span class="piece-what">Building on a corporate platform</span><span class="piece-how">Designed my team's pipelines on Dell's standard GitLab, PCF, Terraform and KeyVault pipelines.</span><span class="piece-where">Dell cart</span></li>
+            <li><span class="piece-what">A shared layer across countries</span><span class="piece-how">The .NET middleware of CEMEX GO through 8 go-lives in 21 countries.</span><span class="piece-where">CEMEX</span></li>
+          </ul>
+          <p class="pieces-gap">What I haven't done yet is run all of this as one product for a whole company, with a dedicated team and formal metrics. That's the job I'm preparing for.</p>
         </div>
       </div>
     </section>
