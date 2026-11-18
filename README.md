@@ -16,8 +16,8 @@ The site has three pages so each audience lands on what matters to them:
 
 | Route | Audience | Content |
 |---|---|---|
-| `/` | Everyone | Short intro, two "pick your view" cards, career at a glance, contact |
-| `/leadership/` | Hiring managers for engineering leadership roles | Teams led (size, makeup, results), how I lead, DellRewards case study, what I'm looking for, leadership CV (EN/ES) |
+| `/` | Everyone | Short intro, two "pick your view" cards, roles I'm targeting, career at a glance, contact |
+| `/leadership/` | Hiring managers for engineering leadership roles | Teams led (size, makeup, results), how I lead, DellRewards case study, AI adoption / vendors / budget evidence, a seven-step platform approach, Platform Engineering path (IDP practice repo, CNCF CNPE in Feb 2027), what I'm looking for, leadership CV (EN/ES) |
 | `/engineering/` | Hiring managers for senior engineering / architect roles | Technical timeline with filters, projects, skills matrix, education |
 
 ```text
@@ -28,8 +28,11 @@ martinnavarrete.dev/
 ├── 404.html                # Custom not-found page (served when the Worker's assets use not_found_handling = "404-page")
 ├── sitemap.xml
 ├── style.css               # Shared design tokens, dark/light themes, responsive layout
-├── app.js                  # Theme toggle, experience filters, resume dialog, mobile nav
+├── app.js                  # Theme toggle, EN/ES switch, experience filters, resume dialog, mobile nav
+├── i18n.js                 # Spanish translation memory (English text block -> Spanish)
 ├── assets/
+│   ├── images/
+│   │   └── og-preview.png      # 1200x630 social share image
 │   └── resumes/
 │       ├── Martin_Navarrete_AI_Engineering_Leadership.pdf      # Leadership CV (EN)
 │       ├── Martin_Navarrete_AI_Engineering_Leadership_ES.pdf   # Leadership CV (ES)
@@ -43,6 +46,12 @@ martinnavarrete.dev/
 Every page is plain HTML with the same header, contact section, footer and resume dialog, so it works without a build step. When you change one of those shared parts, change it in all four HTML files. All asset links are root-relative (`/style.css`, `/assets/...`), so preview the site from the repo root (see Local Testing below), not by opening the files directly.
 
 Content rule: only confirmed facts and metrics. The leadership CV source of truth is `Job-Seeking-2026/Resumes/2026-11_Ternium_MichaelPage/` (`CV_Martin_Navarrete_EN.md` / `_ES.md`).
+
+## 🌐 Languages
+
+Every page has an **ES / EN** button. English is the source text in the HTML; `i18n.js` holds the Spanish as a translation memory keyed by each English text block (its `innerHTML` with whitespace collapsed), so shared blocks such as the header, contact section, resume dialog and footer are translated once for all pages. The choice is remembered, `?lang=es` links straight to Spanish, and internal links keep the language.
+
+When you change English copy in the HTML, update the matching key in `i18n.js`. A block with no entry simply stays in English, which is intended for job titles, product names and tech pills.
 
 ## 🛠️ Step-by-Step: 2-Minute Deployment to Cloudflare Pages ($0/mo Forever)
 
