@@ -1,0 +1,6 @@
+# Repo files that are not part of the website (assets.directory is ".")
+wrangler.jsonc
+README.md
+CNAME
+.claude
+.git

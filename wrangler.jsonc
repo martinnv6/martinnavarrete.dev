@@ -1,0 +1,19 @@
+// Cloudflare Workers static-assets config for martinnavarrete.dev.
+//
+// Production (`npx wrangler deploy` on main) used to auto-generate this same
+// config on every build. It is committed now because branch / PR builds run
+// `npx wrangler preview`, which requires a `previews` block in a config file.
+{
+  "name": "martinnavarrete-dev",
+  "compatibility_date": "2026-10-23",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": ".",
+    // Serve /404.html for unknown paths (what README describes)
+    "not_found_handling": "404-page"
+  },
+  // Worker Previews: an empty block opts every branch and PR into a preview.
+  "previews": {}
+}
